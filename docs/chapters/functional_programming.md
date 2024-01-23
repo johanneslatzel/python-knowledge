@@ -1,5 +1,6 @@
 # Functional Programming
-This chapter is based on the YouTube series [Functional Programming in Python](https://youtube.com/playlist?list=PLP8GkvaIxJP1z5bu4NX_bFrEInBkAgTMr&si=vlbk8pZFg6QRrqfG) by [Real Python](https://www.youtube.com/@realpython) and aims to give a quickoverview to beginners and reference for advanced users.
+This chapter is based on the YouTube series [Functional Programming in Python](https://youtube.com/playlist?list=PLP8GkvaIxJP1z5bu4NX_bFrEInBkAgTMr&si=vlbk8pZFg6QRrqfG) by [Real Python](https://www.youtube.com/@realpython) and [Dear Functional Bros](https://www.youtube.com/watch?v=nuML9SmdbJ4) by [CodeAesthetic](https://www.youtube.com/@CodeAesthetic).
+It aims to give a quickoverview to beginners and reference for advanced users.
 
 ## Immutable Data Structures
 The credo of functional programming is "There shall be no state!". In that spirit a function should not have an inner state or should depend on some sort of state at all. Instead a given function should return the same output every time it is given the same input. It is often useful to therefor protect data (that is used in pipelines of functional code) from changes. Datatypes that cannot be changed after initialization are called immutable.
