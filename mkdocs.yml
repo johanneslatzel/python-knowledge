@@ -1,4 +1,4 @@
-site_name: "Chess App"
+site_name: "My Python Knowledge"
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
