@@ -54,6 +54,17 @@ Traceback (most recent call last):
 TypeError: 'tuple' object doesn't support item deletion
 ```
 
+## Loops and Filters
+Loops often use some sort of internal state to remember where to continue the iteration. In functional programming this state is encoded as input to a recursive function which will return the same output for the same input (meaning the same iterable and the same state of the loop).
+
+Often during iteration a filter is applied by using if statements. In functional programming those statements are itself functions that are then applied to the iterable to sieve out the unwanted elements before consuming the data.
+
+| Structure/Pattern 	| Functional Counterpart 	|
+|-------------------	|-----------------------	|
+| for loop           	| recursive function     	|
+| if statement       	| filter                 	|
+| list comprehension	| generator expression   	|
+
 ### Recursive Function
 ```python
 --8<-- "src/chapters/functional_programming/recursive_function.py"
@@ -78,3 +89,47 @@ first name is Jane
 first name is Mister
 ---------------------------------------------------------------
 ```
+
+### Filter
+```python
+--8<-- "src/chapters/functional_programming/filter.py"
+```
+Output:
+```
+---------------------------------------------------------------
+(Person(first_name='John', last_name='Doe', age=30),
+ Person(first_name='Jane', last_name='Doe', age=25),
+ Person(first_name='Mister', last_name='Roboto', age=1000),
+ Person(first_name='Misses', last_name='Roboto', age=9999999),
+ Person(first_name='Taylor', last_name='Swift', age=22))
+---------------------------------------------------------------
+<filter object at 0x000001B196680580>
+---------------------------------------------------------------
+(Person(first_name='John', last_name='Doe', age=30),
+ Person(first_name='Mister', last_name='Roboto', age=1000),
+ Person(first_name='Misses', last_name='Roboto', age=9999999))
+---------------------------------------------------------------
+```
+
+### Generator
+```python
+--8<-- "src/chapters/functional_programming/generator.py"
+```
+Output:
+```
+---------------------------------------------------------------
+[Person(first_name='John', last_name='Doe', age=30),
+ Person(first_name='Mister', last_name='Roboto', age=1000),
+ Person(first_name='Misses', last_name='Roboto', age=9999999)]
+---------------------------------------------------------------
+(Person(first_name='John', last_name='Doe', age=30),
+ Person(first_name='Mister', last_name='Roboto', age=1000),
+ Person(first_name='Misses', last_name='Roboto', age=9999999))
+---------------------------------------------------------------
+(Person(first_name='John', last_name='Doe', age=30),
+ Person(first_name='Mister', last_name='Roboto', age=1000),
+ Person(first_name='Misses', last_name='Roboto', age=9999999))
+--------------------------------------------------------------
+```
+
+## 
