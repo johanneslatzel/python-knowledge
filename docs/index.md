@@ -1,0 +1,1 @@
+This is my python knowledge. See Project Setup and Software Requirements to use this repository. Go to Chapters to access the actual content.
